@@ -67,6 +67,10 @@ export function Navigation() {
   }
 
   return (
+    // In your navigation component, add this link:
+<Link href="/games" className="nav-link">
+  Games
+</Link>
     <nav className="border-b bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
