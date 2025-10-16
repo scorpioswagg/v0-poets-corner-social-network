@@ -15,7 +15,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import type { User } from "@supabase/supabase-js"
-import { BookOpen, Feather, Users, Trophy, MessageCircle, Settings, LogOut, Edit, FileText } from "lucide-react"
+import { BookOpen, Feather, Users, Trophy, MessageCircle, Settings, LogOut, Edit, FileText, Gamepad2, Lightbulb, Swords, Image, Calendar, Award } from "lucide-react"
 
 interface Profile {
   username: string
@@ -81,7 +81,7 @@ export function Navigation() {
             </Link>
 
             {user && (
-              <div className="hidden md:flex items-center space-x-6">
+              <div className="hidden lg:flex items-center space-x-6">
                 <Link
                   href="/cafe"
                   className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -90,25 +90,53 @@ export function Navigation() {
                   <span>Café</span>
                 </Link>
                 <Link
-                  href="/groups"
+                  href="/games"
                   className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <Users className="h-4 w-4" />
-                  <span>Groups</span>
+                  <Gamepad2 className="h-4 w-4" />
+                  <span>Games</span>
                 </Link>
                 <Link
-                  href="/contests"
+                  href="/prompts"
                   className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <Trophy className="h-4 w-4" />
-                  <span>Contests</span>
+                  <Lightbulb className="h-4 w-4" />
+                  <span>Prompts</span>
                 </Link>
                 <Link
-                  href="/messages"
+                  href="/battles"
+                  className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Swords className="h-4 w-4" />
+                  <span>Battles</span>
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Image className="h-4 w-4" />
+                  <span>Gallery</span>
+                </Link>
+                <Link
+                  href="/lounge"
                   className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  <span>Messages</span>
+                  <span>Lounge</span>
+                </Link>
+                <Link
+                  href="/events"
+                  className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Calendar className="h-4 w-4" />
+                  <span>Events</span>
+                </Link>
+                <Link
+                  href="/leaderboard"
+                  className="flex items-center space-x-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Award className="h-4 w-4" />
+                  <span>Leaderboard</span>
                 </Link>
               </div>
             )}
